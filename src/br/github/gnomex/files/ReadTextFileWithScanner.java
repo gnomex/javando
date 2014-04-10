@@ -6,6 +6,14 @@ import java.util.Scanner;
 
 import static br.github.gnomex.files.common.FilesDefinitions.FILETEXTNAME;
 
+/***
+ * @author gnomex
+ *	Comments in portuguese...
+ *
+ *	Java 6. Forma depreciada no java 7
+ *
+ */
+
 public class ReadTextFileWithScanner {
 
 	private Scanner input;

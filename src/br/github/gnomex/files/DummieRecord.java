@@ -1,9 +1,10 @@
 package br.github.gnomex.files;
 
 import java.io.Serializable;
+import java.util.StringTokenizer;
 
 /**
- * A dummy object to provide some data to save on a file 
+ * A dummy object to provide some data
  */
 
 public class DummieRecord implements Serializable{
@@ -101,5 +102,24 @@ public class DummieRecord implements Serializable{
 		return "<" + something + ","
 				+ somebody + "," + aNumber + "," + bNumber
 				+ ">";
-	}	
+	}
+	
+	public String toTags(){
+		return "<" + something + "><"
+				+ somebody + "><" + aNumber + "><" + bNumber
+				+ ">";
+	}
+	
+	public void unTag(String tagged)	{
+	
+		String untag = tagged.replace("<", "");
+		StringTokenizer st = new StringTokenizer(untag, ">");
+		
+		// Exactly the sequence 
+		this.something = st.nextToken();
+		this.somebody = st.nextToken();
+		this.aNumber = Integer.parseInt(st.nextToken());
+		this.bNumber = Double.parseDouble(st.nextToken());
+		
+	}
 }

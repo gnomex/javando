@@ -3,6 +3,14 @@ package br.github.gnomex.files;
 import java.util.Formatter;
 import static br.github.gnomex.files.common.FilesDefinitions.FILETEXTNAME;
 
+/***
+ * @author gnomex
+ *	Comments in portuguese...
+ *
+ *	Java 6. Forma depreciada no java 7
+ *
+ */
+
 public class CreateTextFileWithFormatter {
 
 	private Formatter output;
