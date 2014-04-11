@@ -15,26 +15,31 @@ package br.github.gnomex.some_examples.lista_exercicios;
 public class BitsMoney {
 
 	
-	public static int[] parse( Integer amount)	{
-		int[] notas = new int[4];
-		notas[0] = notas[1] = notas[2] = notas[3] = 0;	
+	public static String[] parse( Integer amount)	{
+		String[] notas = new String[4];
+		notas[0] = notas[1] = notas[2] = notas[3] = "";	
 		
 		if ( amount < 1) {
 			return notas;
 		}
 		
-		notas[0] = amount / 50;
+		notas[0] = "R$50: " + amount / 50;
 		amount %= 50;
-		notas[1] = amount / 10;
+		notas[1] = "R$10: " +amount / 10;
 		amount %= 10;
-		notas[2] = amount / 5;
+		notas[2] = "R$5: " +amount / 5;
 		amount %= 5;
-		notas[3] = amount;
+		notas[3] = "R$1: " +amount;
 		return notas;		
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(BitsMoney.parse(72));
+		
+		String[] notas = BitsMoney.parse(72);
+		for (int i = 0; i < notas.length; i++) {
+			System.out.println(notas[i]);
+		}
+		
 	}
 	
 }
