@@ -1,4 +1,4 @@
-package br.github.gnomex.lists;
+package br.github.gnomex.some_examples.lists;
 
 	/**
 	 * Modificar a classe ListaDupEnc incluindo um método de ordenação
