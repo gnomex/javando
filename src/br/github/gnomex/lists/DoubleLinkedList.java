@@ -2,7 +2,7 @@ package br.github.gnomex.lists;
 
 import java.util.Iterator;
 
-public class DoubleLinkedList<T> extends AbstractList<T>	{
+public class DoubleLinkedList<T extends Comparable<T>> extends AbstractList<T>	{
 
 	private static final long serialVersionUID = 2L;
 

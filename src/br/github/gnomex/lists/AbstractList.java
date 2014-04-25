@@ -3,7 +3,7 @@ package br.github.gnomex.lists;
 import java.io.Serializable;
 import java.util.Iterator;
 
-public abstract class AbstractList<T> implements Serializable, Iterable<T>{
+public abstract class AbstractList<T extends Comparable<T>> implements Serializable, Iterable<T>{
 
 	private static final long serialVersionUID = 1L;
 

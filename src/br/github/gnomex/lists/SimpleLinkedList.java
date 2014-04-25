@@ -2,7 +2,10 @@ package br.github.gnomex.lists;
 
 import java.util.Iterator;
 
-public class SimpleLinkedList<T> extends AbstractList<T>	{
+import br.github.gnomex.sort.Sort;
+import br.github.gnomex.sort.SortingFactoryPattern;
+
+public class SimpleLinkedList<T extends Comparable<T>> extends AbstractList<T>	{
 
 	private static final long serialVersionUID = 2L;
 
@@ -80,7 +83,6 @@ public class SimpleLinkedList<T> extends AbstractList<T>	{
 
 	@Override
 	public void sort() {
-		// TODO Auto-generated method stub
-		
+		Sort lol = SortingFactoryPattern.getClass(2);
 	}
 }
