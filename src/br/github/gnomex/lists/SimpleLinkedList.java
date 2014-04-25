@@ -79,10 +79,8 @@ public class SimpleLinkedList<T> extends AbstractList<T>	{
 	}
 
 	@Override
-	public AbstractList<?> sort(AbstractList<? extends Comparable<?>> list,
-			int order) {
+	public void sort() {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
-
 }

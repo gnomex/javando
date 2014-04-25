@@ -3,9 +3,7 @@ package br.github.gnomex.lists;
 import java.io.Serializable;
 import java.util.Iterator;
 
-import br.github.gnomex.sort.Sort;
-
-public abstract class AbstractList<T> implements Serializable, Sort{
+public abstract class AbstractList<T> implements Serializable, Iterable<T>{
 
 	private static final long serialVersionUID = 1L;
 
@@ -56,5 +54,7 @@ public abstract class AbstractList<T> implements Serializable, Sort{
 
 	public abstract int lastIndexOf(T t);
 	public abstract int lastIndexOf(Node<T> t);
+	
+	public abstract void sort();
 	
 }
