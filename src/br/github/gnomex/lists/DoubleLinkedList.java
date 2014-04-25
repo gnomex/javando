@@ -77,5 +77,12 @@ public class DoubleLinkedList<T> extends AbstractList<T>	{
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	@Override
+	public AbstractList<?> sort(AbstractList<? extends Comparable<?>> list,
+			int order) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

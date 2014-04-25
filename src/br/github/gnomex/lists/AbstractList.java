@@ -3,7 +3,9 @@ package br.github.gnomex.lists;
 import java.io.Serializable;
 import java.util.Iterator;
 
-public abstract class AbstractList<T> implements Serializable{
+import br.github.gnomex.sort.Sort;
+
+public abstract class AbstractList<T> implements Serializable, Sort{
 
 	private static final long serialVersionUID = 1L;
 
@@ -22,7 +24,6 @@ public abstract class AbstractList<T> implements Serializable{
 	public boolean contains(T o) {
 		return (indexOf(o) != -1);
 	}
-
 
 	public abstract Iterator<T> iterator();
 

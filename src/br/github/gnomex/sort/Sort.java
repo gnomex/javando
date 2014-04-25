@@ -1,9 +1,9 @@
 package br.github.gnomex.sort;
 
-import java.util.List;
+import br.github.gnomex.lists.AbstractList;
 
 public interface Sort {
 
-	public List<Object> sort(List<Object> list, int order);
+	public AbstractList<?> sort(AbstractList<? extends Comparable<?>> list, int order);
 	
 }
