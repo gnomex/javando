@@ -6,11 +6,12 @@ import java.util.LinkedList;
 import java.util.Random;
 
 import br.github.gnomex.lists.Node;
+import br.github.gnomex.lists.NodeComparator;
 
 public class Sorting {
 
-	private ArrayList<Node<Integer>> aList;
-	private LinkedList<Node<Integer>> lList;
+	private ArrayList<Node<String>> aList;
+	private LinkedList<Node<String>> lList;
 	
 	public Sorting()	{
 		aList = new ArrayList<>();
@@ -18,23 +19,25 @@ public class Sorting {
 	}
 	
 	public void sort()	{
-		Collections.sort(aList);
-		Collections.sort(lList);
+		NodeComparator comparator = new NodeComparator(); 
+		
+		Collections.sort(aList, comparator);
+		Collections.sort(lList, comparator);
 	}
 	
 	public void fillLists()	{
 		Random rand = new Random();
 		
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 10; i++) {
 			int  n = rand.nextInt(500) + 1;
-			Node<Integer>  node = new Node<>();
-			node.setSomething( n );
+			Node<String>  node = new Node<>();
+			node.setSomething(Integer.toString(i + n));
 			aList.add(node);
 		}
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 10; i++) {
 			int  n = rand.nextInt(1000) + 1;
-			Node<Integer>  node = new Node<>();
-			node.setSomething( n );
+			Node<String>  node = new Node<>();
+			node.setSomething(Integer.toString(i + n));
 			lList.add(node);
 		}
 		
@@ -42,11 +45,11 @@ public class Sorting {
 	
 	public void printArrays()	{
 		System.out.println("ArrayList");
-		for (Node<Integer> nd : aList ) {
+		for (Node<String> nd : aList ) {
 			System.out.println(nd.toString());
 		}
 		System.out.println("LinkedList");
-		for (Node<Integer> nl : lList)	{
+		for (Node<String> nl : lList)	{
 			System.out.println(nl.toString());
 		}
 	}

@@ -2,7 +2,7 @@ package br.github.gnomex.lists;
 
 import java.io.Serializable;
 
-public class Node<T extends Comparable<T>> implements Serializable, Comparable<Node>{
+public class Node<T extends Comparable<T>> implements Serializable, Comparable<Node<T>>{
 
 	private static final long serialVersionUID = 1L;
 	
