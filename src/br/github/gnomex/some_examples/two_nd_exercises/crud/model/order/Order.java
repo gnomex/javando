@@ -8,6 +8,8 @@ import br.github.gnomex.some_examples.two_nd_exercises.crud.model.order.item.Ite
 
 public class Order implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	private Date orderDate;
 	private Float price;
 	

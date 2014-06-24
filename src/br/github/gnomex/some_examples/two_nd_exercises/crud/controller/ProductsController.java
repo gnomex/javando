@@ -16,6 +16,7 @@ public class ProductsController implements IProductsController{
 		productDAO = new ProductDAO();
 		
 		this.products = (ArrayList<Product>) productDAO.getAll();
+		makeSort();
 	}
 	
 	@Override
@@ -51,6 +52,9 @@ public class ProductsController implements IProductsController{
 		return target;
 	}
 
+	/**
+	 * Only the first instance!!!
+	 * */
 	@Override
 	public Product findByID(Product product) {
 		
@@ -115,7 +119,12 @@ public class ProductsController implements IProductsController{
 	}
 	
 	private void makeSort()	{
-		Collections.sort(this.products);
+		try {
+			Collections.sort(this.products);
+		} catch (Exception e) {
+			System.out.println("Cannot sort the array, see yourself: " + e.getMessage() + "\n\n");
+			e.printStackTrace();
+		}
 	}
 	
 }
