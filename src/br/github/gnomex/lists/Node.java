@@ -2,7 +2,7 @@ package br.github.gnomex.lists;
 
 import java.io.Serializable;
 
-public class Node<T> implements Serializable, Comparable<Node>{
+public class Node<T extends Comparable<T>> implements Serializable, Comparable<Node>{
 
 	private static final long serialVersionUID = 1L;
 	
@@ -30,9 +30,10 @@ public class Node<T> implements Serializable, Comparable<Node>{
 	public void setSomething(T something) {
 		this.something = something;
 	}
+	
 	@Override
 	public String toString() {
-		return "Node [content= " + next.getContent().toString() + "]";
+		return "Node [content= " + something + "]";
 	}
 	
 	@Override
@@ -64,13 +65,9 @@ public class Node<T> implements Serializable, Comparable<Node>{
 			return false;
 		return true;
 	}
+	
 	@Override
 	public int compareTo(Node o) {
-		if (this.equals(o)) {
-			return 0;
-		}
-		
-		return 1;
+	   return something.compareTo((T) o.getContent());
 	}
-	
 }
