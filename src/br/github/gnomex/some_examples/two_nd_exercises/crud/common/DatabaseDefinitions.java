@@ -2,4 +2,6 @@ package br.github.gnomex.some_examples.two_nd_exercises.crud.common;
 
 public class DatabaseDefinitions {
 
+	public static String PRODUCTSFILENAME = "Products.pd";
+	
 }

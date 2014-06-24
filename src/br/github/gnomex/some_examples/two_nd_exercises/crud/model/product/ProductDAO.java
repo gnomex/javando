@@ -1,51 +1,118 @@
 package br.github.gnomex.some_examples.two_nd_exercises.crud.model.product;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import br.github.gnomex.some_examples.two_nd_exercises.crud.model.Product;
+import static br.github.gnomex.some_examples.two_nd_exercises.crud.common.DatabaseDefinitions.*;
 
 public class ProductDAO implements IProductDAO{
 
-	@Override
-	public Product createProduct(Product product) {
-		// TODO Auto-generated method stub
-		return null;
+	private File file = new File(PRODUCTSFILENAME);
+	
+	private FileOutputStream out;
+	private FileInputStream in;
+	
+	public ProductDAO() {
+		try {
+			this.out = new FileOutputStream(file);
+			this.in = new FileInputStream(file);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	private void writeOnFile( Product dm )	{
+
+		ObjectOutputStream os = null;
+
+		try {
+
+			os = new ObjectOutputStream(out);
+			os.writeObject(dm);
+
+			os.flush();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+
+			try {
+				os.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		}
+
 	}
 
-	@Override
-	public Product findByName(Product product) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	private List<Product> readFromFile(){
 
-	@Override
-	public Product findByID(Product product) {
-		// TODO Auto-generated method stub
-		return null;
+		ObjectInputStream oi = null;
+		
+		ArrayList<Product> records = new ArrayList<Product>();
+		
+		try {
+			
+			oi = new ObjectInputStream(in);
+			
+			while (true){
+				
+				Product record = (Product) oi.readObject();
+				records.add(record);
+			}
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e1) {
+			// TODO: handle exception
+			e1.printStackTrace();
+		}
+		
+		try {
+			
+			oi.close();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		return records;
 	}
-
-	@Override
-	public Product updateProduct(Product product) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Boolean deleteProduct(Product product) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
+	
 	@Override
 	public List<Product> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.readFromFile();
 	}
 
 	@Override
 	public Boolean saveAll(List<Product> products) {
-		// TODO Auto-generated method stub
-		return null;
+		try {
+			
+			for( Product pd : products )	{
+				this.writeOnFile(pd);
+			}
+			
+			return Boolean.TRUE;
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		return Boolean.FALSE;
 	}
 
 }

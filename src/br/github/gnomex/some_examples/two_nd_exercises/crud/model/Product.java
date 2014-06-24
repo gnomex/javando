@@ -93,4 +93,15 @@ public class Product implements Serializable, Comparable<Product>{
 	public void setCustPrice(Float custPrice) {
 		this.custPrice = custPrice;
 	}
+
+	public Boolean isValid() {
+		if ( !this.name.isEmpty() && 
+			  this.stock >= 0 && 
+			  this.custPrice >= 0 
+			) {
+			return Boolean.TRUE;
+		}
+		
+		return Boolean.FALSE;
+	}
 }
