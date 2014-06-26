@@ -1,5 +1,7 @@
 package br.github.gnomex.two_th_exercises.products_inventory.views;
 
+
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
