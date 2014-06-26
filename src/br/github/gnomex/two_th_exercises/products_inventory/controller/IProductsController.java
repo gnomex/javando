@@ -1,8 +1,9 @@
-package br.github.gnomex.some_examples.two_nd_exercises.crud.controller;
+package br.github.gnomex.two_th_exercises.products_inventory.controller;
 
 import java.util.List;
 
-import br.github.gnomex.some_examples.two_nd_exercises.crud.model.Product;
+import br.github.gnomex.two_th_exercises.products_inventory.model.Product;
+
 
 public interface IProductsController {
 

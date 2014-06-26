@@ -1,4 +1,4 @@
-package br.github.gnomex.some_examples.two_nd_exercises.crud.views;
+package br.github.gnomex.two_th_exercises.products_inventory.views;
 
 import java.awt.EventQueue;
 

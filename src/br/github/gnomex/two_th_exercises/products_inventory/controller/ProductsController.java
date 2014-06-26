@@ -1,11 +1,12 @@
-package br.github.gnomex.some_examples.two_nd_exercises.crud.controller;
+package br.github.gnomex.two_th_exercises.products_inventory.controller;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import br.github.gnomex.some_examples.two_nd_exercises.crud.model.Product;
-import br.github.gnomex.some_examples.two_nd_exercises.crud.model.product.ProductDAO;
+import br.github.gnomex.two_th_exercises.products_inventory.model.Product;
+import br.github.gnomex.two_th_exercises.products_inventory.model.product.ProductDAO;
+
 
 public class ProductsController implements IProductsController{
 

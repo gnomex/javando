@@ -1,8 +1,10 @@
-package br.github.gnomex.some_examples.two_nd_exercises.crud.model.order.item;
+package br.github.gnomex.two_th_exercises.products_inventory.model.order.item;
 
 import java.io.Serializable;
 
-import br.github.gnomex.some_examples.two_nd_exercises.crud.model.Product;
+import br.github.gnomex.two_th_exercises.products_inventory.model.Product;
+
+
 
 public class Item implements Serializable{
 

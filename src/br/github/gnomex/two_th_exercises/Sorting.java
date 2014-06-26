@@ -1,4 +1,4 @@
-package br.github.gnomex.some_examples.two_nd_exercises;
+package br.github.gnomex.two_th_exercises;
 
 import java.util.ArrayList;
 import java.util.Collections;

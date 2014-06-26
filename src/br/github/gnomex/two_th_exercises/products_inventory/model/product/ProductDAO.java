@@ -1,4 +1,4 @@
-package br.github.gnomex.some_examples.two_nd_exercises.crud.model.product;
+package br.github.gnomex.two_th_exercises.products_inventory.model.product;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,8 +10,8 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.github.gnomex.some_examples.two_nd_exercises.crud.model.Product;
-import static br.github.gnomex.some_examples.two_nd_exercises.crud.common.DatabaseDefinitions.*;
+import br.github.gnomex.two_th_exercises.products_inventory.model.Product;
+import static br.github.gnomex.two_th_exercises.products_inventory.common.DatabaseDefinitions.*;
 
 public class ProductDAO implements IProductDAO{
 
