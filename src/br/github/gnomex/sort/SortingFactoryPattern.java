@@ -11,11 +11,11 @@ public class SortingFactoryPattern {
 	public static Sort getClass(int algorithm)	{
 		switch (algorithm) {
 		case BUBBLE:
-			return new Bubble(); 
+//			return new Bubble(); 
 		case SELECTION:
-			return new Selection();
+//			return new Selection();
 		case INSERTION:
-			return new Insertion();
+//			return new Insertion();
 
 		default:
 			return null;

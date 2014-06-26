@@ -4,6 +4,6 @@ import java.util.List;
 
 public interface SortingStrategyPattern {
 
-	public void doSort(List<? extends Comparable<?>> list); 
+	public <T extends Comparable<? super T >> List <T> sort( List<T> list );
 	
 }

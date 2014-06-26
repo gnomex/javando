@@ -1,15 +1,17 @@
 package br.github.gnomex.sort.algorithms;
 
-import br.github.gnomex.lists.AbstractList;
-import br.github.gnomex.sort.Sort;
+import java.util.List;
 
-public class Insertion implements Sort {
+import br.github.gnomex.sort.SortingStrategyPattern;
+
+public class Insertion implements SortingStrategyPattern {
 
 	@Override
-	public AbstractList<?> sort(AbstractList<? extends Comparable<?>> list,
-			int order) {
+	public <T extends Comparable<? super T>> List<T> sort(List<T> list) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 
 }
