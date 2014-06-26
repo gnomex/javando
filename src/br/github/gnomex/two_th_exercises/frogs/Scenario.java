@@ -2,7 +2,7 @@ package br.github.gnomex.two_th_exercises.frogs;
 
 public class Scenario {
 
-	private Integer routeSize = 100; //Route size
+	private Integer routeSize = 200; //Route size
 	private String name = "Amazing Road";
 
 	public synchronized Boolean hasWinner(Integer distance){
