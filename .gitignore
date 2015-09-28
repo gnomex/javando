@@ -14,3 +14,7 @@ hs_err_pid*
 *.txt
 *.bin
 /target
+.settings/
+
+.phrase
+*.gpg 
